@@ -10,7 +10,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
-import SideMenu from "./components/SideMenu";
+import SideMenu from "./components/sideMenu/SideMenu";
 
 import Project from "./components/Project";
 

@@ -1,0 +1,26 @@
+$sidebar-bg-color: #15191b;
+$icon-bg-color: transparent;
+$icon-size: 38px;
+$breakpoint-sm: 600px;
+
+$highlight-color: #037fff;
+
+.prosidebar {
+  position: relative;
+  button {
+    background-color: transparent;
+    border: 0;
+    // color: #037fff;
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    bottom: 95px;
+  }
+}
+// .arrow-container {
+//   border: 1px solid red;
+//   display: flex;
+//   justify-content: flex-end;
+// }
+
+@import "~react-pro-sidebar/dist/scss/styles.scss";

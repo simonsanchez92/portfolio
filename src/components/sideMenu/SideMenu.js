@@ -1,23 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import profilePicture from "../img/my-profile.jpg";
+import profilePicture from "../../img/my-profile.jpg";
 
 import { useHistory } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
+  faAddressCard,
   faAngleRight,
+  faArrowAltCircleLeft,
+  faArrowLeft,
+  faArrowRight,
   faAtlas,
   faClipboardList,
   faCode,
+  faCodeBranch,
   faCoffee,
+  faEnvelope,
+  faEnvelopeOpen,
   faFile,
+  faFileCode,
   faHouseUser,
   faPaperPlane,
   faUniversity,
 } from "@fortawesome/free-solid-svg-icons";
+
 import "react-pro-sidebar/dist/css/styles.css";
+import "./css/styles.scss";
 
 import {
   ProSidebar,
@@ -28,16 +38,21 @@ import {
   SidebarFooter,
 } from "react-pro-sidebar";
 
+const arrowIconLeft = <FontAwesomeIcon icon={faArrowLeft} />;
+const arrowIconRight = <FontAwesomeIcon icon={faArrowRight} />;
+
 const homeIcon = <FontAwesomeIcon icon={faHouseUser} />;
-const aboutIcon = <FontAwesomeIcon icon={faClipboardList} />;
-const resumeIcon = <FontAwesomeIcon icon={faCode} />;
-const portfolioIcon = <FontAwesomeIcon icon={faClipboardList} />;
-const contactIcon = <FontAwesomeIcon icon={faClipboardList} />;
+const aboutIcon = <FontAwesomeIcon icon={faAddressCard} />;
+const resumeIcon = <FontAwesomeIcon icon={faClipboardList} />;
+const portfolioIcon = <FontAwesomeIcon icon={faCode} />;
+const contactIcon = <FontAwesomeIcon icon={faEnvelope} />;
 
 const SideMenu = () => {
   const [active, setActive] = useState({
     active: "",
   });
+
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleChange = (param) => {
     setActive({
@@ -59,26 +74,47 @@ const SideMenu = () => {
     handleChange(active);
   }, []);
 
+  const handleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
     // <nav id="lateral-nav">
     <nav id="side-menu">
       <ProSidebar
         collapsedWidth={0}
-        collapsed={false}
+        collapsed={isCollapsed}
         width={180}
         toggled={false}
         breakPoint={"sm"}
+        className="prosidebar"
       >
+        <button onClick={() => handleCollapse()}>
+          {isCollapsed ? arrowIconRight : arrowIconLeft}
+        </button>
+
         <SidebarHeader>
           <div className="avatar-container">
-            <div className="profile-picture">
-              <img src={profilePicture} alt="profile" />
+            <div
+              className={
+                isCollapsed ? "profile-picture collapsed" : "profile-picture"
+              }
+            >
+              <img
+                className={isCollapsed ? "collapsed" : ""}
+                src={profilePicture}
+                alt="profile"
+              />
             </div>
           </div>
         </SidebarHeader>
-        <Menu iconShape="square" popperArrow={true}>
-          <MenuItem onClick={() => handleChange("home")} icon={homeIcon}>
-            <Link className={active.active === "home" ? "active" : ""} to="/">
+        <Menu iconShape="square" popperArrow={true} className="sidebar-menu">
+          <MenuItem
+            active={true}
+            onClick={() => handleChange("home")}
+            icon={homeIcon}
+          >
+            <Link className={active.active === "home" ? " active" : ""} to="/">
               Home
             </Link>
           </MenuItem>
@@ -109,7 +145,7 @@ const SideMenu = () => {
               Portfolio
             </Link>
           </MenuItem>
-          <MenuItem onClick={() => handleChange("contact")} icon={resumeIcon}>
+          <MenuItem onClick={() => handleChange("contact")} icon={contactIcon}>
             <Link
               className={active.active === "contact" ? "active" : ""}
               to="/contact"
@@ -120,10 +156,8 @@ const SideMenu = () => {
           <ul className="menu"></ul>
         </Menu>
 
-        <SidebarFooter>
-          <div className="copy-container">
-            <span>&copy; 2021, All rights reserved</span>
-          </div>
+        <SidebarFooter className="copy-container">
+          <span>&copy; {isCollapsed ? "" : " 2021, All rights reserved"}</span>
         </SidebarFooter>
       </ProSidebar>
     </nav>
