@@ -7,12 +7,6 @@
   padding: 0;
 }
 
-#root {
-  width: 100%;
-
-  display: flex;
-}
-
 body {
   font-size: 1rem;
   line-height: 1.6;
@@ -26,7 +20,11 @@ body {
   color: #fff;
   display: flex;
   min-height: 100vh;
-  position: relative;
+
+  justify-content: space-between;
+}
+#root {
+  /* width: 100%; */
 }
 
 nav#side-menu {
@@ -34,7 +32,7 @@ nav#side-menu {
   position: fixed;
 }
 
-nav#lateral-nav {
+/* nav#lateral-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -53,7 +51,7 @@ nav#lateral-nav {
 
   transform: translate(0px);
   z-index: 10;
-}
+} */
 
 nav.top-bar {
   /* padding: 20px; */
@@ -277,15 +275,22 @@ nav#lateral-nav ul li a.active nav.top-bar ul li a.active {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  /* flex-direction: column; */
   /* min-height: 100vh; */
+
   height: 100%;
-  padding: 20px;
   width: 100%;
+  padding: 20px;
+
   padding-left: 260px;
+
+  transition: all 0.3s ease-in-out;
 }
 
+main.side-menu-collapsed {
+  padding-left: 120px;
+}
 .container {
   padding: 25px 10px;
 
@@ -492,34 +497,33 @@ body::before {
 .about-content {
   /* padding: 0 10px; */
   /* flex: 1; */
+
   width: 50%;
 }
 
 .about-content h3 {
-  font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 600;
-  margin-top: -8px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .about-content h3 span {
   color: #037fff;
 }
 .about-content p {
   margin-bottom: 1.2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #a4acc4;
 }
 
 .about-content ul {
-  margin-bottom: 1rem;
+  margin-bottom: 8px;
 }
 
 .about-content ul li {
   list-style: none;
-  margin-bottom: 3px;
+  margin: 12px 0;
   color: #a4acc4;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .about-content ul li b {
@@ -527,7 +531,6 @@ body::before {
   position: relative;
   display: inline-block;
   margin-right: 7px;
-  margin-bottom: 5px;
 }
 
 .about-content ul li b::after {
@@ -902,7 +905,10 @@ body::before {
   margin: 10px 0;
 }
 .certification-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+}
+.issued {
+  font-size: 13px;
 }
 
 /* Portfolio Page */

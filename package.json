@@ -19,7 +19,8 @@
     "react-pro-sidebar": "^0.6.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-sidebar": "^3.0.2"
+    "react-sidebar": "^3.0.2",
+    "react-tooltip": "^4.2.21"
   },
   "scripts": {
     "predeploy": "npm run build",

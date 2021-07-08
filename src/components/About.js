@@ -29,10 +29,10 @@ function About() {
                 <b>Full Name</b>Simon Sanchez
               </li>
               <li>
-                <b>Age</b> 28 Years
+                <b>Age</b> 29
               </li>
               <li>
-                <b>Nationality</b>Argentinian
+                <b>Nationality</b> Argentinian
               </li>
               <li>
                 <b>Languages</b> English, Spanish

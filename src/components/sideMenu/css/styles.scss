@@ -1,11 +1,11 @@
-$sidebar-bg-color: #15191b;
+$sidebar-bg-color: #191d2b;
 $icon-bg-color: transparent;
 $icon-size: 38px;
 $breakpoint-sm: 600px;
-
+$sidebar-collapsed-width: 75px;
 $highlight-color: #037fff;
 
-.prosidebar {
+.sidebar-header {
   position: relative;
   button {
     background-color: transparent;
@@ -13,8 +13,8 @@ $highlight-color: #037fff;
     // color: #037fff;
     position: absolute;
     z-index: 10;
-    right: 0px;
-    bottom: 95px;
+    right: 45%;
+    bottom: -45px;
   }
 }
 // .arrow-container {

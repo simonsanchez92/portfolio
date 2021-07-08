@@ -1,14 +1,16 @@
 {
   "id": "1",
   "title": "The Final Cut",
-  "subtitle": "Movie searcher blabla",
+  "subtitle": "Movie searcher web application",
   "cover_url": "/the-final-cut/the-final-cut-1.png",
   "functionality": [
-    { "desc": "Register" },
-    { "desc": "Log in functionality" },
+    { "desc": "Sign up / Sign in" },
     { "desc": "Search movies by title" },
+    { "desc": "Pagination" },
     { "desc": "Access movie's plot and information" },
-    { "desc": "Add/delete to profile's favourites" }
+    { "desc": "Add / remove favourites" },
+    { "desc": "Log out" },
+    { "desc": "Delete account" }
   ],
   "technologies": [
     { "name": "HTML5", "icon": "devicon-html5-plain colored" },
@@ -25,11 +27,12 @@
   "learnt": [
     { "desc": "State management with Redux" },
     { "desc": "React useState and useEffect hooks" },
-    { "desc": "Built simple database with express" },
+    { "desc": "Built backend with node / express" },
+    { "desc": "Model, controllers and routes " },
     { "desc": "Express data validation" },
     { "desc": "Integration with Mongoose service" },
     { "desc": "Javascript array methods" },
-    { "desc": "Layout design with Bootstrap classes" },
+
     { "desc": "React Bootstrap library" }
   ],
   "images": [

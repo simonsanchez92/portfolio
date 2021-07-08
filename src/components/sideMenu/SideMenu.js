@@ -8,26 +8,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   faAddressCard,
-  faAngleRight,
-  faArrowAltCircleLeft,
   faArrowLeft,
   faArrowRight,
-  faAtlas,
   faClipboardList,
   faCode,
-  faCodeBranch,
-  faCoffee,
   faEnvelope,
-  faEnvelopeOpen,
-  faFile,
-  faFileCode,
   faHouseUser,
-  faPaperPlane,
-  faUniversity,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "react-pro-sidebar/dist/css/styles.css";
 import "./css/styles.scss";
+
+import ReactTooltip from "react-tooltip";
 
 import {
   ProSidebar,
@@ -38,8 +30,17 @@ import {
   SidebarFooter,
 } from "react-pro-sidebar";
 
-const arrowIconLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-const arrowIconRight = <FontAwesomeIcon icon={faArrowRight} />;
+const arrowIconLeft = (
+  <FontAwesomeIcon
+    icon={faArrowLeft}
+    size={"lg"}
+    color={"#25598d"}
+    pull={"left"}
+  />
+);
+const arrowIconRight = (
+  <FontAwesomeIcon icon={faArrowRight} size={"lg"} color={"#25598d"} />
+);
 
 const homeIcon = <FontAwesomeIcon icon={faHouseUser} />;
 const aboutIcon = <FontAwesomeIcon icon={faAddressCard} />;
@@ -47,12 +48,10 @@ const resumeIcon = <FontAwesomeIcon icon={faClipboardList} />;
 const portfolioIcon = <FontAwesomeIcon icon={faCode} />;
 const contactIcon = <FontAwesomeIcon icon={faEnvelope} />;
 
-const SideMenu = () => {
+const SideMenu = ({ isCollapsed, toggle }) => {
   const [active, setActive] = useState({
     active: "",
   });
-
-  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleChange = (param) => {
     setActive({
@@ -74,10 +73,6 @@ const SideMenu = () => {
     handleChange(active);
   }, []);
 
-  const handleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
   return (
     // <nav id="lateral-nav">
     <nav id="side-menu">
@@ -87,13 +82,8 @@ const SideMenu = () => {
         width={180}
         toggled={false}
         breakPoint={"sm"}
-        className="prosidebar"
       >
-        <button onClick={() => handleCollapse()}>
-          {isCollapsed ? arrowIconRight : arrowIconLeft}
-        </button>
-
-        <SidebarHeader>
+        <SidebarHeader className="sidebar-header">
           <div className="avatar-container">
             <div
               className={
@@ -107,10 +97,17 @@ const SideMenu = () => {
               />
             </div>
           </div>
+          <button onClick={() => toggle()}>
+            {isCollapsed ? arrowIconRight : arrowIconLeft}
+          </button>
         </SidebarHeader>
         <Menu iconShape="square" popperArrow={true} className="sidebar-menu">
+          {/* <p data-tip="hello world" data-for="registerTip">
+            tip
+          </p> */}
+
           <MenuItem
-            active={true}
+            active={active.active === "home" ? true : false}
             onClick={() => handleChange("home")}
             icon={homeIcon}
           >
@@ -118,7 +115,11 @@ const SideMenu = () => {
               Home
             </Link>
           </MenuItem>
-          <MenuItem onClick={() => handleChange("about")} icon={aboutIcon}>
+          <MenuItem
+            onClick={() => handleChange("about")}
+            icon={aboutIcon}
+            active={active.active === "about" ? true : false}
+          >
             <Link
               className={active.active === "about" ? "active" : ""}
               to="/about"
@@ -126,7 +127,11 @@ const SideMenu = () => {
               About
             </Link>
           </MenuItem>
-          <MenuItem onClick={() => handleChange("resume")} icon={resumeIcon}>
+          <MenuItem
+            onClick={() => handleChange("resume")}
+            icon={resumeIcon}
+            active={active.active === "resume" ? true : false}
+          >
             <Link
               className={active.active === "resume" ? "active" : ""}
               to="/resume"
@@ -137,6 +142,7 @@ const SideMenu = () => {
           <MenuItem
             onClick={() => handleChange("portfolio")}
             icon={portfolioIcon}
+            active={active.active === "portfolio" ? true : false}
           >
             <Link
               className={active.active === "portfolio" ? "active" : ""}
@@ -145,7 +151,11 @@ const SideMenu = () => {
               Portfolio
             </Link>
           </MenuItem>
-          <MenuItem onClick={() => handleChange("contact")} icon={contactIcon}>
+          <MenuItem
+            onClick={() => handleChange("contact")}
+            icon={contactIcon}
+            active={active.active === "contact" ? true : false}
+          >
             <Link
               className={active.active === "contact" ? "active" : ""}
               to="/contact"

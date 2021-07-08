@@ -104,12 +104,18 @@ function useWindowSize() {
 function App() {
   let size = useWindowSize();
 
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const handleToggle = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
     <Router>
       <Fragment>
         {/* <Navbar width={size.width} showNav={size.showNav} toggler={"hide"} /> */}
-        <SideMenu />
-        <main>
+        <SideMenu isCollapsed={isCollapsed} toggle={handleToggle} />
+        <main className={isCollapsed ? "side-menu-collapsed" : ""}>
           <Route exact path="/" component={Landing} />
 
           <Switch>
