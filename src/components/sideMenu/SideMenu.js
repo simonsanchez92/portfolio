@@ -25,7 +25,6 @@ import {
   ProSidebar,
   Menu,
   MenuItem,
-  SubMenu,
   SidebarHeader,
   SidebarFooter,
 } from "react-pro-sidebar";
@@ -36,10 +35,16 @@ const arrowIconLeft = (
     size={"lg"}
     color={"#25598d"}
     pull={"left"}
+    className="arrow-bounce"
   />
 );
 const arrowIconRight = (
-  <FontAwesomeIcon icon={faArrowRight} size={"lg"} color={"#25598d"} />
+  <FontAwesomeIcon
+    icon={faArrowRight}
+    size={"lg"}
+    color={"#25598d"}
+    className="arrow-bounce"
+  />
 );
 
 const homeIcon = <FontAwesomeIcon icon={faHouseUser} />;
@@ -77,6 +82,7 @@ const SideMenu = ({ isCollapsed, toggle }) => {
     // <nav id="lateral-nav">
     <nav id="side-menu">
       <ProSidebar
+        class="pro-sidebar"
         collapsedWidth={0}
         collapsed={isCollapsed}
         width={180}
@@ -102,10 +108,6 @@ const SideMenu = ({ isCollapsed, toggle }) => {
           </button>
         </SidebarHeader>
         <Menu iconShape="square" popperArrow={true} className="sidebar-menu">
-          {/* <p data-tip="hello world" data-for="registerTip">
-            tip
-          </p> */}
-
           <MenuItem
             active={active.active === "home" ? true : false}
             onClick={() => handleChange("home")}

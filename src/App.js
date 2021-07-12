@@ -14,6 +14,8 @@ import SideMenu from "./components/sideMenu/SideMenu";
 
 import Project from "./components/Project";
 
+import TopBar from "./components/TopBar";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -113,6 +115,7 @@ function App() {
   return (
     <Router>
       <Fragment>
+        <TopBar />
         {/* <Navbar width={size.width} showNav={size.showNav} toggler={"hide"} /> */}
         <SideMenu isCollapsed={isCollapsed} toggle={handleToggle} />
         <main className={isCollapsed ? "side-menu-collapsed" : ""}>

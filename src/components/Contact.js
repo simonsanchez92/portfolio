@@ -4,12 +4,12 @@ import Form from "react-bootstrap/Form";
 
 const Contact = () => {
   return (
-    <div>
-      <div class="container contact-container">
-        <div class="section-title">
-          <h2>Contact Me</h2>
-          <span>Contact Me</span>
-        </div>
+    <div class="container contact-container">
+      {/* <div class="container contact-container"> */}
+
+      <div class="section-title">
+        <h2>Contact Me</h2>
+        <span>Contact Me</span>
       </div>
 
       <div class="container form-container">
