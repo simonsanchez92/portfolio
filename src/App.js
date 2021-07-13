@@ -22,6 +22,7 @@ import {
   Switch,
   useParams,
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
 // Hook
 
@@ -102,11 +103,10 @@ function useWindowSize() {
 //     return () => window.removeEventListener("resize", handleResize);
 //   }, []);
 // }
-import { createBrowserHistory } from "history";
-
-const history = createBrowserHistory();
 
 function App() {
+  const history = createBrowserHistory();
+
   let size = useWindowSize();
 
   const [isCollapsed, setIsCollapsed] = useState(false);
