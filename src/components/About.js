@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../img/profile.jpg";
+import profilePic from "../img/profile.jpg";
 
 function About() {
   return (
@@ -12,7 +12,7 @@ function About() {
 
         <div className="about-info row">
           <div className="image-container">
-            <img src={profile} alt="me after a long ride" />
+            <img src={profilePic} alt="profile picture" />
           </div>
 
           <div className="about-content">
