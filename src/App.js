@@ -113,7 +113,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router history={history} basename={process.env.PUBLIC_URL}>
       <Fragment>
         <TopBar />
         {/* <Navbar width={size.width} showNav={size.showNav} toggler={"hide"} /> */}
