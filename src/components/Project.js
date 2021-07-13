@@ -28,7 +28,10 @@ const Project = (props) => {
 
   return (
     <Fragment>
-      <div style={{ alignItems: "flex-start" }} className="container">
+      <div
+        style={{ alignItems: "flex-start" }}
+        className="container project-poster-container"
+      >
         <Breadcrumb className="component-breadcrumb">
           <Breadcrumb.Item>Projects</Breadcrumb.Item>
           <Breadcrumb.Item

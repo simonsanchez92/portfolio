@@ -26,6 +26,9 @@ body {
 }
 #root {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 nav#side-menu {
@@ -1228,13 +1231,18 @@ body::before {
 /* Projects section */
 .carousel-container {
   width: 700px;
-  max-width: 75%;
+  max-width: 90%;
   margin: 40px auto;
 }
-
+.project-poster-container {
+  /* padding: 0; */
+}
 .project-poster {
   display: flex;
   justify-content: center;
+  width: 100%;
+  /* border: 1px solid green; */
+  margin-top: 20px;
 }
 .project-poster img {
   width: 90%;
@@ -1502,6 +1510,10 @@ body::before {
   }
   .technologies ul {
     justify-content: space-around;
+  }
+
+  .project-tech-list {
+    justify-content: center;
   }
   main {
     padding: 0 15px;
