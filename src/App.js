@@ -108,7 +108,7 @@ function App() {
   const history = createBrowserHistory();
 
   let size = useWindowSize();
-
+  console.log(history);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleToggle = () => {

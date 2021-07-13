@@ -25,7 +25,6 @@ const Project = (props) => {
   }, []);
 
   // console.log(project);
-  console.log(project);
 
   return (
     <Fragment>
@@ -143,7 +142,7 @@ const Project = (props) => {
         </div>
       </div>
       <div className="divider"></div>
-      <ddiv className="image-gallery">
+      <div className="image-gallery">
         <div className="carousel-container">
           <Carousel interval={5000}>
             {assets &&
@@ -158,7 +157,7 @@ const Project = (props) => {
               ))}
           </Carousel>
         </div>
-      </ddiv>
+      </div>
       <ul className="project-links">
         <li>
           <a href={project.url} target="_blank">
