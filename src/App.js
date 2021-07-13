@@ -13,8 +13,11 @@ import TopBar from "./components/TopBar";
 import Project from "./components/Project";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
 function App() {
+  const history = createBrowserHistory();
+
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleToggle = () => {
@@ -22,7 +25,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router history={history} basename={process.env.PUBLIC_URL}>
       <Fragment>
         <TopBar />
 
