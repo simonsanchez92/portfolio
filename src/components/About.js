@@ -32,7 +32,7 @@ function About() {
                 <b>Age</b> 29
               </li>
               <li>
-                <b>Nationality</b> Argentinian
+                <b>Nationality</b> Argentine
               </li>
               <li>
                 <b>Languages</b> English, Spanish

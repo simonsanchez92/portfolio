@@ -606,7 +606,7 @@ body::before {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-decoration: none;
   margin-top: 15px;
   padding: 0 30px;
@@ -615,8 +615,8 @@ body::before {
   color: #fff;
   background-color: #037fff;
   border: 0;
-  height: 50px;
-  line-height: 50px;
+  height: 45px;
+  line-height: 45px;
   transition: all 0.4s ease-out;
 }
 
@@ -693,16 +693,15 @@ body::before {
   color: #a4acc4;
 }
 .technologies-container {
+  padding: 0;
   padding-top: 40px;
-
-  /* border:2px solid red; */
 }
 .technologies-container .section-title {
-  /* padding-left: 15px; */
+  padding-left: 15px;
 }
 
 .technologies {
-  width: 100%;
+  width: 75%;
   border-bottom: 2px solid #191d2b91;
 
   display: flex;
@@ -718,14 +717,17 @@ body::before {
 }
 .tech {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin: 10px;
-  padding: 10px;
+  margin: 10px 5px;
+  /* padding: 10px; */
+  /* border: 2px solid red; */
+  width: 140px;
 }
 .tech i {
-  font-size: 2.5rem;
-  padding: 10px;
+  font-size: 2.2rem;
+  /* padding: 10px; */
+  margin-right: 5px;
 }
 .tech span {
   font-size: 1.2rem;
@@ -926,18 +928,18 @@ body::before {
   width: 100%;
 }
 .certifications {
-  width: 750px;
+  /* width: 750px; */
   max-width: 100%;
 }
 .certifications li {
-  margin: 30px 0;
+  margin: 20px 0;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .certifications li i {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: auto 0;
 }
 .certification-info {
@@ -955,7 +957,7 @@ body::before {
   margin: 10px 0;
 }
 .certification-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .issued {
   font-size: 13px;
@@ -1155,13 +1157,13 @@ body::before {
 .contact-card {
   background-color: #191d2b;
   border-radius: 3px;
-  padding: 30px;
+  padding: 20px;
   margin-bottom: 20px;
   display: flex;
 }
 .contact-card span {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   border: 1px solid #2e344e;
   line-height: 70px;
   margin-right: 20px;
@@ -1171,11 +1173,13 @@ body::before {
 }
 .contact-card span i {
   color: #a4acc4;
+  font-size: 1.2rem;
 }
 .contact-card-content ul {
   display: flex;
   flex-wrap: wrap;
   padding-top: 10px;
+  justify-content: space-between;
 }
 
 .contact-card-content ul li {
@@ -1186,7 +1190,7 @@ body::before {
 }
 .contact-card-content ul li a {
   color: #eee;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
@@ -1209,7 +1213,7 @@ body::before {
 .contact-card-content p {
   cursor: pointer;
   margin: 5px 0;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #a4acc4;
   transition: all 0.2s ease-in-out;
 }
@@ -1323,6 +1327,7 @@ body::before {
 .modal-body {
   padding: 0;
   width: 600px;
+  max-width: 100%;
 }
 .modal-body img {
   width: 100%;
@@ -1469,14 +1474,21 @@ body::before {
 
   .certifications li {
     flex-direction: column;
+    align-content: center;
   }
 
   .certifications li button {
     /* margin: 10px 0; */
     margin-bottom: 30px;
-    width: 75%;
-  }
 
+    width: 100%;
+  }
+  .about-content a,
+  .form-btn,
+  .project-btn,
+  .see-certification {
+    letter-spacing: 1px;
+  }
   .project-poster img {
     /* height: 230px; */
     width: 75%;
@@ -1484,6 +1496,12 @@ body::before {
   .learning-image img,
   .functionality-image img {
     display: none;
+  }
+  .technologies {
+    width: 100%;
+  }
+  .technologies ul {
+    justify-content: space-around;
   }
   main {
     padding: 0 15px;

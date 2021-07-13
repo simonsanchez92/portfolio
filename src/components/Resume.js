@@ -301,7 +301,7 @@ const Resume = () => {
                 <i class="devicon-javascript-plain colored"></i>
                 <div className="info">
                   <span className="certification-title">
-                    Building Interactive JavaScript Websites
+                    Building Interactive JS Websites
                   </span>
                   <span className="issued">By Codecademy</span>
                 </div>
