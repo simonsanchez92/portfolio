@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 // import Navbar from './components/Navbar';
 import Navbar from "./components/Navbar";
-import Landing from "./components/Landing";
+import Home from "./components/Home";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
@@ -119,15 +119,15 @@ function App() {
         {/* <Navbar width={size.width} showNav={size.showNav} toggler={"hide"} /> */}
         <SideMenu isCollapsed={isCollapsed} toggle={handleToggle} />
         <main className={isCollapsed ? "side-menu-collapsed" : ""}>
-          <Route exact path="/portfolio/home" component={Landing} />
+          <Route exact path="/" component={Home} />
 
           <Switch>
-            <Route path="/portfolio/about" component={About} />
-            <Route path="/portfolio/resume" component={Resume} />
-            <Route path="/portfolio/portfolio" component={Portfolio} />
-            <Route path="/portfolio/contact" component={Contact} />
+            <Route path="/about" component={About} />
+            <Route path="/resume" component={Resume} />
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/contact" component={Contact} />
 
-            <Route path="/portfolio/project/:projectId" component={Project} />
+            <Route path="/project/:projectId" component={Project} />
           </Switch>
         </main>
       </Fragment>
