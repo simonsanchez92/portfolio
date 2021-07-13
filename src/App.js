@@ -102,6 +102,9 @@ function useWindowSize() {
 //     return () => window.removeEventListener("resize", handleResize);
 //   }, []);
 // }
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
 
 function App() {
   let size = useWindowSize();
