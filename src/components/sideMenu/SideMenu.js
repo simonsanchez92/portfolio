@@ -19,8 +19,6 @@ import {
 import "react-pro-sidebar/dist/css/styles.css";
 import "./css/styles.scss";
 
-import ReactTooltip from "react-tooltip";
-
 import {
   ProSidebar,
   Menu,
@@ -76,13 +74,13 @@ const SideMenu = ({ isCollapsed, toggle }) => {
     }
 
     handleChange(active);
-  }, []);
+  }, [history.location.pathname]);
 
   return (
     // <nav id="lateral-nav">
     <nav id="side-menu">
       <ProSidebar
-        class="pro-sidebar"
+        className="pro-sidebar"
         collapsedWidth={0}
         collapsed={isCollapsed}
         width={180}

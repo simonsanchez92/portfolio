@@ -15,7 +15,11 @@ function Home() {
         <div className="social">
           <ul>
             <li>
-              <a href="https://github.com/simonsanchez92" target="_blank">
+              <a
+                href="https://github.com/simonsanchez92"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 <i className="fab fa-github fa-2x"></i>{" "}
               </a>
@@ -25,6 +29,7 @@ function Home() {
               <a
                 href="http://www.linkedin.com/in/simon-sanchez-4a4011190"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 <i className="fab fa-linkedin fa-2x"></i>{" "}
@@ -32,21 +37,29 @@ function Home() {
             </li>
 
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 <i className="fab fa-facebook fa-2x"></i>{" "}
               </a>
             </li>
 
-            <li>
-              <a href="#" target="_blank">
+            {/* <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 {" "}
                 <i className="fab fa-twitter fa-2x"></i>{" "}
               </a>
-            </li>
+            </li> */}
 
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 <i className="fab fa-instagram fa-2x"></i>{" "}
               </a>

@@ -1,8 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
-import axios from "axios";
+
 import { Link } from "react-router-dom";
 
-import { getProjects } from "../services/projects";
 import projectsFile from "../js/projects.json";
 
 import moviePic from "../img/the-final-cut/the-final-cut-1.png";
@@ -19,7 +18,6 @@ const Portfolio = () => {
     fetchData();
   }, []);
 
-  console.log(process.env);
   return (
     <Fragment>
       <div className="container">

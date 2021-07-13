@@ -1,28 +1,27 @@
-import React, { useState, useEffect, Fragment } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useCallback, Fragment } from "react";
+
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
 
 import Carousel from "react-bootstrap/Carousel";
-
-import { getAssets } from "../services/projects";
 
 const Project = (props) => {
   const [assets, setAssets] = useState([]);
 
   const project = props.location.state.project;
 
-  const fetchAssets = async () => {
-    // const id = props.location.state.project.id;
-    // const data = await getAssets(id);
-
+  const fetchAssets = useCallback(() => {
     setAssets(project.images);
-  };
+  }, [project.images]);
+  // const fetchAssets = async () => {
+  //   // const id = props.location.state.project.id;
+  //   // const data = await getAssets(id);
+
+  //   setAssets(project.images);
+  // };
 
   useEffect(() => {
     fetchAssets();
-  }, []);
+  }, [fetchAssets]);
 
   // console.log(project);
 
@@ -62,7 +61,7 @@ const Project = (props) => {
           >
             {/* Esto no va */}
             {project.technologies.map((technology, i) => (
-              <li className="list-item">
+              <li className="list-item" key={i}>
                 <i className={technology.icon}></i> {technology.name}
               </li>
             ))}
@@ -105,8 +104,8 @@ const Project = (props) => {
             <ul
             // dangerouslySetInnerHTML={{ __html: project.functionality }}
             >
-              {project.functionality.map((item, index) => (
-                <li>{item.desc}</li>
+              {project.functionality.map((item, i) => (
+                <li key={i}>{item.desc}</li>
               ))}
               {/* <li>Register</li>
           <li>Log in</li>
@@ -127,8 +126,8 @@ const Project = (props) => {
             <ul
             // dangerouslySetInnerHTML={{ __html: project.learnt }}
             >
-              {project.learnt.map((item, index) => (
-                <li>{item.desc}</li>
+              {project.learnt.map((item, i) => (
+                <li key={i}>{item.desc}</li>
               ))}
               {/* <li>Dynamic rendering of React components</li>
           <li>Managing app's state with Redux</li>
@@ -163,12 +162,16 @@ const Project = (props) => {
       </div>
       <ul className="project-links">
         <li>
-          <a href={project.url} target="_blank">
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
             <button className="project-btn">See Live</button>
           </a>
         </li>
         <li>
-          <a href={project.github_url} target="_blank">
+          <a
+            href={project.github_url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="project-btn">
               Github Repo <i className="devicon-github-original colored"></i>
             </button>

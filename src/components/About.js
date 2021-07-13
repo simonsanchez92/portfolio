@@ -12,7 +12,7 @@ function About() {
 
         <div className="about-info row">
           <div className="image-container">
-            <img src={profilePic} alt="profile picture" />
+            <img src={profilePic} alt="Profile pic" />
           </div>
 
           <div className="about-content">
@@ -44,7 +44,13 @@ function About() {
                 <b>Availability</b> Hirable
               </li>
             </ul>
-            <a href="#">Download CV</a>
+            <a
+              href="https://www.linkedin.com/in/simon-sanchez-4a4011190/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download CV
+            </a>
           </div>
         </div>
       </div>
@@ -62,61 +68,61 @@ function About() {
         <div className="technologies">
           <ul>
             <li className="tech">
-              <i class="devicon-javascript-plain colored"></i>
+              <i className="devicon-javascript-plain colored"></i>
               <span>JavaScript</span>
             </li>
 
             <li className="tech">
-              <i class="devicon-react-original colored"></i>
+              <i className="devicon-react-original colored"></i>
               <span>React</span>
             </li>
             <li className="tech">
-              <i class="devicon-html5-plain colored"></i>
+              <i className="devicon-html5-plain colored"></i>
 
               <span>HTML5</span>
             </li>
             <li className="tech">
-              <i class="devicon-nodejs-plain-wordmark colored"></i>
+              <i className="devicon-nodejs-plain-wordmark colored"></i>
 
               <span>Node JS</span>
             </li>
 
             <li className="tech">
-              <i class="devicon-css3-plain colored"></i>
+              <i className="devicon-css3-plain colored"></i>
 
               <span>CSS3</span>
             </li>
             <li className="tech">
-              <i class="devicon-sass-original colored"></i>
+              <i className="devicon-sass-original colored"></i>
 
               <span>Sass</span>
             </li>
             <li className="tech">
-              <i class="devicon-php-plain colored"></i>
+              <i className="devicon-php-plain colored"></i>
               <span>PHP</span>
             </li>
             <li className="tech">
-              <i class="devicon-angularjs-plain colored"></i>
+              <i className="devicon-angularjs-plain colored"></i>
 
               <span>Angular</span>
             </li>
             <li className="tech">
-              <i class="devicon-git-plain colored"></i>
+              <i className="devicon-git-plain colored"></i>
 
               <span>Git</span>
             </li>
             <li className="tech">
-              <i class="devicon-mongodb-plain colored"></i>
+              <i className="devicon-mongodb-plain colored"></i>
 
               <span>Mongo db</span>
             </li>
 
             <li className="tech">
-              <i class="devicon-postgresql-plain colored"></i>
+              <i className="devicon-postgresql-plain colored"></i>
               <span>PostgreSQL</span>
             </li>
             <li className="tech">
-              <i class="devicon-npm-original-wordmark colored"></i>
+              <i className="devicon-npm-original-wordmark colored"></i>
 
               <span>NPM</span>
             </li>

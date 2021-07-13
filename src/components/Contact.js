@@ -4,16 +4,16 @@ import Form from "react-bootstrap/Form";
 
 const Contact = () => {
   return (
-    <div class="container contact-container">
+    <div className="container contact-container">
       {/* <div class="container contact-container"> */}
 
-      <div class="section-title">
+      <div className="section-title">
         <h2>Contact Me</h2>
         <span>Contact Me</span>
       </div>
 
-      <div class="container form-container">
-        <div class="contact-form">
+      <div className="container form-container">
+        <div className="contact-form">
           <h4>Get In Touch</h4>
 
           <Form>
@@ -46,13 +46,13 @@ const Contact = () => {
           </Form>
         </div>
 
-        <div class="contact-cards">
-          <div class="contact-card">
+        <div className="contact-cards">
+          <div className="contact-card">
             <span>
-              <i class="fas fa-users fa-2x"></i>
+              <i className="fas fa-users fa-2x"></i>
             </span>
 
-            <div class="contact-card-content">
+            <div className="contact-card-content">
               <h6>Social Media</h6>
 
               <ul>
@@ -60,43 +60,56 @@ const Contact = () => {
                   <a
                     href="http://www.linkedin.com/in/simon-sanchez-4a4011190"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {" "}
-                    <i class="fab fa-linkedin"></i>/LinkedIn
+                    <i className="fab fa-linkedin"></i>/LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://github.com/simonsanchez92"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {" "}
-                    <i class="fab fa-github "></i>/Github
+                    <i className="fab fa-github "></i>/Github
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {" "}
-                    <i class="fab fa-facebook "></i>/Facebook
+                    <i className="fab fa-facebook "></i>/Facebook
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {" "}
-                    <i class="fab fa-instagram"></i>/Instagram
+                    <i className="fab fa-instagram"></i>/Instagram
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#">
                     {" "}
                     <i class="fab fa-twitter "></i>/Twitter
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
-          <div class="contact-card">
+          <div className="contact-card">
             <span>
-              <i class="far fa-envelope fa-2x"></i>
+              <i className="far fa-envelope fa-2x"></i>
             </span>
-            <div class="contact-card-content">
+            <div className="contact-card-content">
               <h6>Email</h6>
               <p>simonsanchez.1992@gmail.com</p>
             </div>

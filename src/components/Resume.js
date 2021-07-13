@@ -253,7 +253,7 @@ const Resume = () => {
           <ul className="certifications">
             <li>
               <div className="certification-info">
-                <i class="devicon-css3-plain-wordmark colored"></i>
+                <i className="devicon-css3-plain-wordmark colored"></i>
                 <div className="info">
                   <span className="certification-title">
                     Responsive web design
@@ -275,7 +275,7 @@ const Resume = () => {
             </li>
             <li>
               <div className="certification-info">
-                <i class="devicon-react-original-wordmark colored"></i>
+                <i className="devicon-react-original-wordmark colored"></i>
                 <div className="info">
                   <span className="certification-title">
                     Web development career path
@@ -298,7 +298,7 @@ const Resume = () => {
 
             <li>
               <div className="certification-info">
-                <i class="devicon-javascript-plain colored"></i>
+                <i className="devicon-javascript-plain colored"></i>
                 <div className="info">
                   <span className="certification-title">
                     Building Interactive JS Websites
@@ -320,7 +320,7 @@ const Resume = () => {
             </li>
             <li>
               <div className="certification-info">
-                <i class="devicon-git-plain colored"></i>
+                <i className="devicon-git-plain colored"></i>
                 <div className="info">
                   <span className="certification-title">Learn Git</span>
                   <span className="issued">By Codecademy</span>
@@ -340,7 +340,7 @@ const Resume = () => {
             </li>
             <li>
               <div className="certification-info">
-                <i class="fas fa-terminal"></i>
+                <i className="fas fa-terminal"></i>
                 <div className="info">
                   <span className="certification-title">
                     Learn the Command Line

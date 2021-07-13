@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +11,6 @@ import {
   faEllipsisV,
   faEnvelope,
   faHouseUser,
-  faLaptop,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -38,6 +37,10 @@ const topIcon = (
   />
 );
 
+/**
+ * Hook that alerts clicks outside of the passed ref
+ */
+
 const TopBar = () => {
   const [active, setActive] = useState({
     active: "",
@@ -49,6 +52,7 @@ const TopBar = () => {
     setActive({
       active: param,
     });
+    setIsOpen(false);
   };
 
   let history = useHistory();
@@ -63,13 +67,38 @@ const TopBar = () => {
     }
 
     handleChange(active);
-  }, []);
+  }, [history.location.pathname]);
   const toggleBar = () => {
     setIsOpen(!isOpen);
   };
 
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          // alert("You clicked outside of me!");
+
+          setIsOpen(false);
+        }
+      }
+
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
+
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef);
+
   return (
-    <Fragment>
+    <div ref={wrapperRef}>
       <div className="toggler-container">
         <span>{topIcon} Welcome to my site</span>
 
@@ -124,7 +153,7 @@ const TopBar = () => {
           </li>
         </ul>
       </nav>
-    </Fragment>
+    </div>
   );
 };
 
