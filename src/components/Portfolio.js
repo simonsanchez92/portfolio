@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { getProjects } from "../services/projects";
 import projectsFile from "../js/projects.json";
 
+import moviePic from "../img/the-final-cut/the-final-cut-1.png";
+
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
@@ -33,7 +35,8 @@ const Portfolio = () => {
           projects.map((project, i) => (
             <div className="project" key={i}>
               <div className="project-image">
-                <img src={process.env.PUBLIC_URL + project.cover_url} alt="" />
+                {/* <img src={process.env.PUBLIC_URL + project.cover_url} alt="" /> */}
+                <img src={moviePic} alt="" />
                 <ul>
                   <li>
                     <Link
