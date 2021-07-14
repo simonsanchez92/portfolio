@@ -54,7 +54,7 @@ const Project = (props) => {
 
       <div className="container">
         <div className="project-technologies">
-          <h3>Built with:</h3>
+          <h3>Tecnologías utilizadas:</h3>
           <ul
             className="project-tech-list"
             // dangerouslySetInnerHTML={{ __html: project.technologies }}
@@ -100,7 +100,7 @@ const Project = (props) => {
 
         <div className="functionality">
           <div className="functionality-info">
-            <h3>Functionalities:</h3>
+            <h3>Funcionalidades:</h3>
             <ul
             // dangerouslySetInnerHTML={{ __html: project.functionality }}
             >
@@ -122,7 +122,7 @@ const Project = (props) => {
 
         <div className="learning">
           <div className="learning-info">
-            <h3>What I learnt:</h3>
+            <h3>¿Qué aprendi?</h3>
             <ul
             // dangerouslySetInnerHTML={{ __html: project.learnt }}
             >

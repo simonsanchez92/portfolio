@@ -1,60 +1,121 @@
 {
-  "id": "1",
-  "title": "The Final Cut",
-  "subtitle": "Buscador de películas",
-  "cover_url": "/the-final-cut/the-final-cut-1.png",
-  "functionality": [
-    { "desc": "Registro / Inicio de sesión" },
-    { "desc": "Buscador de películas por título" },
-    { "desc": "Paginación" },
-    { "desc": "Acceso a información de la película" },
-    { "desc": "Añadir / eliminar favoritos" },
-    { "desc": "Cerrar sesión" },
-    { "desc": "Eliminar cuenta" }
-  ],
-  "technologies": [
-    { "name": "HTML5", "icon": "devicon-html5-plain colored" },
-    { "name": "CSS3", "icon": "devicon-css3-plain colored" },
-    { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
-    { "name": "React", "icon": "devicon-react-original colored" },
-    { "name": "Redux", "icon": "devicon-redux-original colored" },
-    { "name": "Bootstrap", "icon": "devicon-bootstrap-plain colored" },
-    { "name": "Node", "icon": "devicon-nodejs-plain colored" },
-    { "name": "Express", "icon": "ddevicon-express-original colored" },
-    { "name": "MongoDB", "icon": "devicon-mongodb-plain-wordmark colored" }
-  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "The Final Cut",
+      "subtitle": "Sitio web para obtener información de películas",
+      "cover_url": "/the-final-cut/the-final-cut-1.png",
+      "functionality": [
+        {
+          "desc": "Obtención de datos de películas a través de la API de themoviedb.org"
+        },
+        { "desc": "Registro / Inicio de sesión" },
+        { "desc": "Buscador de películas por título" },
+        { "desc": "Paginación" },
+        { "desc": "Acceso a información de la película" },
+        { "desc": "Añadir / eliminar favoritos" },
+        { "desc": "Cerrar sesión" },
+        { "desc": "Eliminar cuenta" }
+      ],
+      "technologies": [
+        { "name": "HTML5", "icon": "devicon-html5-plain colored" },
+        { "name": "CSS3", "icon": "devicon-css3-plain colored" },
+        { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+        { "name": "React", "icon": "devicon-react-original colored" },
+        { "name": "Redux", "icon": "devicon-redux-original colored" },
+        { "name": "Bootstrap", "icon": "devicon-bootstrap-plain colored" },
+        { "name": "Node", "icon": "devicon-nodejs-plain colored" },
+        { "name": "Express", "icon": "ddevicon-express-original colored" },
+        { "name": "MongoDB", "icon": "devicon-mongodb-plain-wordmark colored" }
+      ],
 
-  "learnt": [
-    { "desc": "Administración de estado de la aplicación con Redux" },
-    { "desc": "Implementación de hooks de React" },
-    { "desc": "Desarrollo de backend con node / express" },
-    { "desc": "Modelos, controladores y rutas " },
-    { "desc": "Funcionalidad de validación de Express" },
-    { "desc": "Integración con servicio de Mongoose" },
-    { "desc": "Librería de React Bootstrap" }
-  ],
-  "images": [
-    {
-      "url": "/the-final-cut/the-final-cut-1.png",
-      "alt": "picture 1"
+      "learnt": [
+        { "desc": "Administración de estado de la aplicación con Redux" },
+        { "desc": "Uso de API de terceros para obtener datos" },
+        { "desc": "Implementación de hooks de React" },
+        { "desc": "Desarrollo de backend con node / express" },
+        { "desc": "Modelos, controladores y rutas " },
+        { "desc": "Funcionalidad de validación de Express" },
+        { "desc": "Integración con servicio de Mongoose" },
+        { "desc": "Librería de React Bootstrap" }
+      ],
+      "images": [
+        {
+          "url": "/the-final-cut/the-final-cut-1.png",
+          "alt": "picture 1"
+        },
+        {
+          "url": "/the-final-cut/the-final-cut-2.png",
+          "alt": "picture 2"
+        },
+        {
+          "url": "/the-final-cut/the-final-cut-3.png",
+          "alt": "picture 3"
+        },
+        {
+          "url": "/the-final-cut/the-final-cut-4.png",
+          "alt": "picture 4"
+        },
+        {
+          "url": "/the-final-cut/the-final-cut-5.png",
+          "alt": "picture 5"
+        }
+      ],
+      "url": "https://thawing-basin-65705.herokuapp.com",
+      "github_url": "https://github.com/simonsanchez92/the-final-cut-backend"
     },
     {
-      "url": "/the-final-cut/the-final-cut-2.png",
-      "alt": "picture 2"
-    },
-    {
-      "url": "/the-final-cut/the-final-cut-3.png",
-      "alt": "picture 3"
-    },
-    {
-      "url": "/the-final-cut/the-final-cut-4.png",
-      "alt": "picture 4"
-    },
-    {
-      "url": "/the-final-cut/the-final-cut-5.png",
-      "alt": "picture 5"
+      "id": "2",
+      "title": "Portfolio site",
+      "subtitle": "Sitio web de presentación",
+      "cover_url": "/portfolio/portfolio-1.png",
+      "functionality": [
+        {
+          "desc": "Uso de React Router para la navegación entre pantallas"
+        },
+        { "desc": "Menu lateral y superior desplegables" },
+        { "desc": "Diseño responsivo" },
+        { "desc": "Carga dinámica de proyectos" },
+        { "desc": "Uso de modales para visualizar certificados" },
+        { "desc": "Carrusel de imágenes en sección de proyectos" },
+        { "desc": "Acceso a repositorios y URL de cada proyecto" }
+      ],
+      "technologies": [
+        { "name": "HTML5", "icon": "devicon-html5-plain colored" },
+        { "name": "CSS3", "icon": "devicon-css3-plain colored" },
+        { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+        { "name": "React", "icon": "devicon-react-original colored" },
+
+        { "name": "Bootstrap", "icon": "devicon-bootstrap-plain colored" }
+      ],
+
+      "learnt": [
+        { "desc": "Implementación de librerías de terceros" },
+        { "desc": "Organización de componentes en React" },
+        { "desc": "React Hooks" },
+        { "desc": "Administración de estados de la aplicación" },
+        { "desc": "Deploy del proyecto a Github Pages" }
+      ],
+      "images": [
+        {
+          "url": "/portfolio/portfolio-1.png",
+          "alt": "picture 1"
+        },
+        {
+          "url": "/portfolio/portfolio-2.png",
+          "alt": "picture 2"
+        },
+        {
+          "url": "/portfolio/portfolio-3.png",
+          "alt": "picture 3"
+        },
+        {
+          "url": "/portfolio/portfolio-4.png",
+          "alt": "picture 4"
+        }
+      ],
+      "url": "https://simonsanchez92.github.io/portfolio/",
+      "github_url": "https://github.com/simonsanchez92/portfolio"
     }
-  ],
-  "url": "https://thawing-basin-65705.herokuapp.com",
-  "github_url": "https://github.com/simonsanchez92/the-final-cut-backend"
+  ]
 }

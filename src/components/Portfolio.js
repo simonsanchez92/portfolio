@@ -12,12 +12,13 @@ const Portfolio = () => {
 
   const fetchData = async () => {
     // const data = await getProjects();
-    setProjects([projectsFile]);
+    setProjects(projectsFile.projects);
+    console.log(projectsFile.projects);
+    console.log(projects);
   };
 
   useEffect(() => {
     fetchData();
-    console.log(projects);
   }, []);
 
   return (
@@ -29,14 +30,14 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="projects-container">
-        {projects.length < 1 ? (
+        {projects.length < 2 ? (
           <div>Cargando...</div>
         ) : (
           projects.map((project, i) => (
             <div className="project" key={i}>
               <div className="project-image">
                 {/* <img src={process.env.PUBLIC_URL + project.cover_url} alt="" /> */}
-                <img src={moviePic} alt="" />
+                <img src={process.env.PUBLIC_URL + project.cover_url} alt="" />
                 <ul>
                   <li>
                     <Link

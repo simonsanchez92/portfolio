@@ -8,7 +8,7 @@ function Home() {
           Hola, soy <span>Simon Sanchez</span>
         </h1>
         <p>
-          Desarrollador full stack dedicado al desarrollo de sitios web y
+          Desarrollador full stack orientado al desarrollo de sitios web y
           aplicaciones móviles
         </p>
         {/* <h1>
