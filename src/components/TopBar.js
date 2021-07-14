@@ -124,7 +124,7 @@ const TopBar = () => {
               About
             </Link>
           </li>
-          <li onClick={() => handleChange("resume")}>
+          {/* <li onClick={() => handleChange("resume")}>
             <Link
               className={active.active === "resume" ? "active" : ""}
               to="/resume"
@@ -132,7 +132,7 @@ const TopBar = () => {
               {resumeIcon}
               Resume
             </Link>
-          </li>
+          </li> */}
           <li onClick={() => handleChange("portfolio")}>
             <Link
               className={active.active === "portfolio" ? "active" : ""}

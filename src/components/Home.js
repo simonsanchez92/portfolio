@@ -5,13 +5,20 @@ function Home() {
     <div className="container landing">
       <div className="home-page">
         <h1>
+          Hola, soy <span>Simon Sanchez</span>
+        </h1>
+        <p>
+          Desarrollador full stack dedicado al desarrollo de sitios web y
+          aplicaciones móviles
+        </p>
+        {/* <h1>
           Hi, I am <span>Simon Sanchez</span>
         </h1>
         <p>
           I am a frontend web developer. I can provide clean code and pixel
           perfect design. I also make website more & more interactive with web
           animations.
-        </p>
+        </p> */}
         <div className="social">
           <ul>
             <li>

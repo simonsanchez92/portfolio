@@ -2,7 +2,8 @@ import React, { Fragment, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import projectsFile from "../js/projects.json";
+// import projectsFile from "../js/projects.json";
+import projectsFile from "../js/proyectos.json";
 
 import moviePic from "../img/the-final-cut/the-final-cut-1.png";
 
@@ -16,6 +17,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     fetchData();
+    console.log(projects);
   }, []);
 
   return (

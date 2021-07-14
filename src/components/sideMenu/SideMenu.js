@@ -127,7 +127,7 @@ const SideMenu = ({ isCollapsed, toggle }) => {
               About
             </Link>
           </MenuItem>
-          <MenuItem
+          {/* <MenuItem
             onClick={() => handleChange("resume")}
             icon={resumeIcon}
             active={active.active === "resume" ? true : false}
@@ -138,7 +138,7 @@ const SideMenu = ({ isCollapsed, toggle }) => {
             >
               Resume
             </Link>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem
             onClick={() => handleChange("portfolio")}
             icon={portfolioIcon}

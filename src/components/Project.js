@@ -23,7 +23,7 @@ const Project = (props) => {
     fetchAssets();
   }, [fetchAssets]);
 
-  // console.log(project);
+  console.log(assets);
 
   return (
     <Fragment>
@@ -163,7 +163,7 @@ const Project = (props) => {
       <ul className="project-links">
         <li>
           <a href={project.url} target="_blank" rel="noopener noreferrer">
-            <button className="project-btn">See Live</button>
+            <button className="project-btn">Ir al sitio</button>
           </a>
         </li>
         <li>

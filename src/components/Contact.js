@@ -8,40 +8,43 @@ const Contact = () => {
       {/* <div class="container contact-container"> */}
 
       <div className="section-title">
-        <h2>Contact Me</h2>
-        <span>Contact Me</span>
+        {/* <h2>Contact Me</h2>
+        <span>Contact Me</span> */}
+        <h2>Contacto</h2>
+        <span>Contacto</span>
       </div>
 
       <div className="container form-container">
         <div className="contact-form">
-          <h4>Get In Touch</h4>
+          {/* <h4>Get In Touch</h4> */}
+          <h4>Contactame</h4>
 
           <Form>
             <Form.Group controlId="form-name">
-              <Form.Label>Your name:</Form.Label>
+              <Form.Label>Tu nombre:</Form.Label>
               <Form.Control
                 className={"form-control"}
                 as="input"
-                placeholder="Enter your name..."
+                placeholder="Ingresa tu nombre..."
               />
             </Form.Group>
 
             <Form.Group controlId="form-subject">
-              <Form.Label>Subject</Form.Label>
-              <Form.Control as="input" placeholder="Enter subject.." />
+              <Form.Label>Asunto</Form.Label>
+              <Form.Control as="input" placeholder="Ingresa el asunto.." />
             </Form.Group>
 
             <Form.Group controlId="form-message">
-              <Form.Label>Your message:</Form.Label>
+              <Form.Label>Tu mensaje:</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}
-                placeholder="Write a message.."
+                placeholder="Escribe un mensaje..."
               />
             </Form.Group>
 
             <button className="form-btn" type="submit">
-              Send Mail
+              Enviar mail
             </button>
           </Form>
         </div>
@@ -53,7 +56,7 @@ const Contact = () => {
             </span>
 
             <div className="contact-card-content">
-              <h6>Social Media</h6>
+              <h6>Redes sociales</h6>
 
               <ul>
                 <li>
