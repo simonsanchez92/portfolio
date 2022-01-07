@@ -1,8 +1,53 @@
-import React from "react";
+import React, { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Form from "react-bootstrap/Form";
+import emailJs from "@emailjs/browser";
+import keys from "../emailSender/keys";
 
 const Contact = () => {
+  const form = useRef();
+  const formName = useRef();
+  const formSubject = useRef();
+  const formMessage = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      name: formName.current.value,
+      subject: formSubject.current.value,
+      message: formMessage.current.value,
+    };
+
+    emailJs
+      .send(keys.SERVICE_ID, keys.TEMPLATE_ID, templateParams, keys.USER_ID)
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+  };
+
+  const notify = () => {
+    const options = {
+      style: { backgroundColor: "#1111117c", color: "#eee" },
+      progressStyle: { backgroundColor: "#414247" },
+      color: "red",
+      autoClose: 2000,
+    };
+    toast.info("Sending email...", options);
+
+    toast.success("Email sent!", {
+      progressStyle: { backgroundColor: "transparent" },
+      style: options.style,
+      autoClose: options.autoClose,
+    });
+  };
   return (
     <div className="container contact-container">
       {/* <div class="container contact-container"> */}
@@ -13,16 +58,19 @@ const Contact = () => {
         <h2>Contacto</h2>
         <span>Contacto</span>
       </div>
+      <ToastContainer position="bottom-right" limit="1" />
 
+      <button onClick={notify}>Notify!</button>
       <div className="container form-container">
         <div className="contact-form">
           {/* <h4>Get In Touch</h4> */}
           <h4>Contactame</h4>
 
-          <Form>
+          <Form ref={form} onSubmit={sendEmail}>
             <Form.Group controlId="form-name">
               <Form.Label>Tu nombre:</Form.Label>
               <Form.Control
+                ref={formName}
                 className={"form-control"}
                 as="input"
                 placeholder="Ingresa tu nombre..."
@@ -31,12 +79,17 @@ const Contact = () => {
 
             <Form.Group controlId="form-subject">
               <Form.Label>Asunto</Form.Label>
-              <Form.Control as="input" placeholder="Ingresa el asunto.." />
+              <Form.Control
+                ref={formSubject}
+                as="input"
+                placeholder="Ingresa el asunto.."
+              />
             </Form.Group>
 
             <Form.Group controlId="form-message">
               <Form.Label>Tu mensaje:</Form.Label>
               <Form.Control
+                ref={formMessage}
                 as="textarea"
                 rows={3}
                 placeholder="Escribe un mensaje..."

@@ -1,20 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import profilePic from "../img/profile.jpg";
 
-import Modal from "react-bootstrap/Modal";
-
 function About() {
-  // Modals logic
-  const [show, setShow] = useState(false);
-  const [certificationPath, setPath] = useState("");
-
-  const handleClose = () => setShow(false);
-
-  const handleShow = (certPath) => {
-    setPath(certPath);
-    setShow(true);
-  };
-
   return (
     <div>
       <div className="container">
@@ -61,9 +48,10 @@ function About() {
               </li>
             </ul>
             <a
-              href="https://www.linkedin.com/in/simon-sanchez-4a4011190/"
+              href={process.env.PUBLIC_URL + "/cv/simon_sanchez_cv.pdf"}
               target="_blank"
               rel="noopener noreferrer"
+              download
             >
               Descargar CV
             </a>
@@ -255,132 +243,6 @@ function About() {
             </p>
           </div>
         </div> */}
-      </div>
-
-      <div className="container">
-        <div className="section-title">
-          <h2>Certificados</h2>
-          <span>Certificados</span>
-        </div>
-
-        <div className="certifications-container">
-          <ul className="certifications">
-            <li>
-              <div className="certification-info">
-                <i className="devicon-css3-plain-wordmark colored"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Responsive web design
-                  </span>
-                  <span className="issued">By FreeCodeCamp</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/freecodecamp-responsive-web-design.png"
-                  )
-                }
-              >
-                Ver certificado
-              </button>
-            </li>
-            <li>
-              <div className="certification-info">
-                <i className="devicon-react-original-wordmark colored"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Web development career path
-                  </span>
-                  <span className="issued">By Codecademy</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/codecademy-web-development.png"
-                  )
-                }
-              >
-                Ver certificado
-              </button>
-            </li>
-
-            <li>
-              <div className="certification-info">
-                <i className="devicon-javascript-plain colored"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Building Interactive JS Websites
-                  </span>
-                  <span className="issued">By Codecademy</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/codecademy-interactive-websites.png"
-                  )
-                }
-              >
-                Ver certificado
-              </button>
-            </li>
-            <li>
-              <div className="certification-info">
-                <i className="devicon-git-plain colored"></i>
-                <div className="info">
-                  <span className="certification-title">Learn Git</span>
-                  <span className="issued">By Codecademy</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/codecademy-git.png"
-                  )
-                }
-              >
-                Ver certificado
-              </button>
-            </li>
-            <li>
-              <div className="certification-info">
-                <i className="fas fa-terminal"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Learn the Command Line
-                  </span>
-                  <span className="issued">By Codecademy</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/codecademy-command-line.png"
-                  )
-                }
-              >
-                Ver certificado
-              </button>
-            </li>
-          </ul>
-          <Modal className="component-modal" show={show} onHide={handleClose}>
-            <Modal.Body className="modal-body">
-              <img src={certificationPath} alt="" />
-            </Modal.Body>
-          </Modal>
-        </div>
       </div>
     </div>
   );

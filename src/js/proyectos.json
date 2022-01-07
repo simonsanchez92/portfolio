@@ -15,7 +15,8 @@
         { "desc": "Acceso a información de la película" },
         { "desc": "Añadir / eliminar favoritos" },
         { "desc": "Cerrar sesión" },
-        { "desc": "Eliminar cuenta" }
+        { "desc": "Eliminar cuenta" },
+        { "desc": "Uso de alertas personalizados" }
       ],
       "technologies": [
         { "name": "HTML5", "icon": "devicon-html5-plain colored" },
@@ -61,7 +62,7 @@
           "alt": "picture 5"
         }
       ],
-      "url": "https://thawing-basin-65705.herokuapp.com",
+      "url": "https://shrouded-oasis-45232.herokuapp.com",
       "github_url": "https://github.com/simonsanchez92/the-final-cut-backend"
     },
     {

@@ -8,12 +8,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   faAddressCard,
-  faArrowLeft,
-  faArrowRight,
   faClipboardList,
   faCode,
   faEnvelope,
   faHouseUser,
+  faLongArrowAltLeft,
+  faLongArrowAltRight,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "react-pro-sidebar/dist/css/styles.css";
@@ -29,7 +30,7 @@ import {
 
 const arrowIconLeft = (
   <FontAwesomeIcon
-    icon={faArrowLeft}
+    icon={faLongArrowAltLeft}
     size={"lg"}
     color={"#25598d"}
     pull={"left"}
@@ -38,7 +39,7 @@ const arrowIconLeft = (
 );
 const arrowIconRight = (
   <FontAwesomeIcon
-    icon={faArrowRight}
+    icon={faLongArrowAltRight}
     size={"lg"}
     color={"#25598d"}
     className="arrow-bounce"
@@ -101,11 +102,8 @@ const SideMenu = ({ isCollapsed, toggle }) => {
               />
             </div>
           </div>
-          <button onClick={() => toggle()}>
-            {isCollapsed ? arrowIconRight : arrowIconLeft}
-          </button>
         </SidebarHeader>
-        <Menu iconShape="square" popperArrow={true} className="sidebar-menu">
+        <Menu iconShape="square" popperArrow={true} className="sidebar-menu ">
           <MenuItem
             active={active.active === "home" ? true : false}
             onClick={() => handleChange("home")}
@@ -127,7 +125,7 @@ const SideMenu = ({ isCollapsed, toggle }) => {
               About
             </Link>
           </MenuItem>
-          {/* <MenuItem
+          <MenuItem
             onClick={() => handleChange("resume")}
             icon={resumeIcon}
             active={active.active === "resume" ? true : false}
@@ -138,7 +136,7 @@ const SideMenu = ({ isCollapsed, toggle }) => {
             >
               Resume
             </Link>
-          </MenuItem> */}
+          </MenuItem>
           <MenuItem
             onClick={() => handleChange("portfolio")}
             icon={portfolioIcon}
@@ -163,7 +161,10 @@ const SideMenu = ({ isCollapsed, toggle }) => {
               Contact
             </Link>
           </MenuItem>
-          <ul className="menu"></ul>
+
+          <button className="toggle-btn" onClick={() => toggle()}>
+            {isCollapsed ? arrowIconRight : arrowIconLeft}
+          </button>
         </Menu>
 
         <SidebarFooter className="copy-container">

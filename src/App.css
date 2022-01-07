@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,10 +10,8 @@
 }
 
 body {
-  font-size: 1rem;
-  line-height: 1.6;
-
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Open Sans", sans-serif;
 
   background: #0f2027;
   background: -webkit-linear-gradient(to left, #2c5364, #203a43, #0f2027);
@@ -277,6 +277,7 @@ nav#lateral-nav ul li a.active nav.top-bar ul li a.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .copy-container {
@@ -288,8 +289,7 @@ nav#lateral-nav ul li a.active nav.top-bar ul li a.active {
 
 .copy-container span {
   color: #a4acc4;
-  font-weight: 200;
-  font-size: 12px;
+  font-size: 14px;
 }
 /* 
 .nav-toggler {
@@ -310,6 +310,15 @@ nav#lateral-nav ul li a.active nav.top-bar ul li a.active {
   border-radius: 4px;
   display: none;
 } */
+
+.toggle-btn {
+  background: none;
+  border: 0;
+  position: absolute;
+  top: 5px;
+  right: 0px;
+}
+
 #nav-toggler {
   cursor: pointer;
   position: absolute;
@@ -356,7 +365,6 @@ main.side-menu-collapsed {
   padding-left: 85px;
 }
 .container {
-  /* border: 1px solid yellow; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -469,9 +477,7 @@ body::before {
 .section-title h2 {
   text-transform: uppercase;
   position: relative;
-  font-weight: 700;
   padding-bottom: 10px;
-  font-size: 2.3rem;
 }
 
 .section-title h2::before {
@@ -656,7 +662,7 @@ body::before {
 }
 
 .service {
-  /* padding: 0 15px; */
+  cursor: pointer;
   width: 30%;
   height: 300px;
   max-width: 100%;

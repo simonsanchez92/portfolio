@@ -13,6 +13,7 @@ import TopBar from "./components/TopBar";
 import Project from "./components/Project";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import { createBrowserHistory } from "history";
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
 
           <Switch>
             <Route path="/about" component={About} />
-            {/* <Route path="/resume" component={Resume} /> */}
+            <Route path="/resume" component={Resume} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact" component={Contact} />
 

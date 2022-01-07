@@ -21,7 +21,6 @@ $highlight-color: #037fff;
 .arrow-bounce {
   display: flex;
   justify-content: flex-end;
-
   transform: translate3d(0, 0, 0);
   animation-name: shakeMe;
   animation-duration: 5s;
