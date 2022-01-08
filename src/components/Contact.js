@@ -9,6 +9,7 @@ import keys from "../emailSender/keys";
 const Contact = () => {
   const form = useRef();
   const formName = useRef();
+  const formEmail = useRef();
   const formSubject = useRef();
   const formMessage = useRef();
 
@@ -17,37 +18,50 @@ const Contact = () => {
 
     const templateParams = {
       name: formName.current.value,
+      email: formEmail.current.value,
       subject: formSubject.current.value,
       message: formMessage.current.value,
     };
-
-    emailJs
-      .send(keys.SERVICE_ID, keys.TEMPLATE_ID, templateParams, keys.USER_ID)
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
-  };
-
-  const notify = () => {
     const options = {
       style: { backgroundColor: "#1111117c", color: "#eee" },
       progressStyle: { backgroundColor: "#414247" },
-      color: "red",
       autoClose: 2000,
     };
-    toast.info("Sending email...", options);
 
-    toast.success("Email sent!", {
-      progressStyle: { backgroundColor: "transparent" },
-      style: options.style,
-      autoClose: options.autoClose,
-    });
+    if (
+      !templateParams.name ||
+      !templateParams.subject ||
+      !templateParams.email ||
+      !templateParams.message
+    ) {
+      toast.error("Please fill all fields first...", options);
+    } else {
+      toast.info("Sending email...", options);
+
+      emailJs
+        .send(keys.SERVICE_ID, keys.TEMPLATE_ID, templateParams, keys.USER_ID)
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            toast.success("Email sent!", {
+              progressStyle: { backgroundColor: "transparent" },
+              style: options.style,
+              autoClose: options.autoClose,
+            });
+
+            formName.current.value = "";
+            formEmail.current.value = "";
+            formSubject.current.value = "";
+            formMessage.current.value = "";
+          },
+          function (error) {
+            console.log("FAILED...", error);
+            toast.error("There has been some error...", options);
+          }
+        );
+    }
   };
+
   return (
     <div className="container contact-container">
       {/* <div class="container contact-container"> */}
@@ -59,8 +73,6 @@ const Contact = () => {
         <span>Contacto</span>
       </div>
       <ToastContainer position="bottom-right" limit="1" />
-
-      <button onClick={notify}>Notify!</button>
       <div className="container form-container">
         <div className="contact-form">
           {/* <h4>Get In Touch</h4> */}
@@ -74,6 +86,16 @@ const Contact = () => {
                 className={"form-control"}
                 as="input"
                 placeholder="Ingresa tu nombre..."
+              />
+            </Form.Group>
+
+            <Form.Group controlId="form-email">
+              <Form.Label>Email:</Form.Label>
+              <Form.Control
+                ref={formEmail}
+                className={"form-control"}
+                as="input"
+                placeholder="Ingresa tu Email..."
               />
             </Form.Group>
 

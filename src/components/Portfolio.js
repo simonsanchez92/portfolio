@@ -1,11 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
-
 import { Link } from "react-router-dom";
-
 // import projectsFile from "../js/projects.json";
 import projectsFile from "../js/proyectos.json";
-
-import moviePic from "../img/the-final-cut/the-final-cut-1.png";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
@@ -30,7 +26,7 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="projects-container">
-        {projects.length < 2 ? (
+        {projects.length < 1 ? (
           <div>Cargando...</div>
         ) : (
           projects.map((project, i) => (

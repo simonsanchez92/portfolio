@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import profilePicture from "../../img/my-profile.jpg";
-
-import { useHistory } from "react-router-dom";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   faAddressCard,
   faClipboardList,
@@ -14,9 +11,7 @@ import {
   faHouseUser,
   faLongArrowAltLeft,
   faLongArrowAltRight,
-  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-
 import "react-pro-sidebar/dist/css/styles.css";
 import "./css/styles.scss";
 

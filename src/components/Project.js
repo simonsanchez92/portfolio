@@ -52,52 +52,7 @@ const Project = (props) => {
         </div>
       </div>
 
-      <div className="container">
-        <div className="project-technologies">
-          <h3>Tecnologías utilizadas:</h3>
-          <ul
-            className="project-tech-list"
-            // dangerouslySetInnerHTML={{ __html: project.technologies }}
-          >
-            {/* Esto no va */}
-            {project.technologies.map((technology, i) => (
-              <li className="list-item" key={i}>
-                <i className={technology.icon}></i> {technology.name}
-              </li>
-            ))}
-
-            {/* <li className="list-item">
-          <i className="devicon-html5-plain colored"></i> HTML5
-        </li>
-        <li className="list-item">
-          <i className="devicon-css3-plain colored"></i> CSS3
-        </li>
-        <li className="list-item">
-          <i className="devicon-javascript-plain colored"></i> JavaScript
-        </li>
-        <li className="list-item">
-          <i className="devicon-react-original colored"></i> React
-        </li>
-        <li className="list-item">
-          <i className="devicon-redux-original colored"></i> Redux
-        </li>
-        <li className="list-item">
-          <i className="devicon-bootstrap-plain colored"></i> Bootstrap
-        </li>
-        <li className="list-item">
-          <i className="devicon-nodejs-plain colored"></i> Node
-        </li>
-        <li className="list-item">
-          <i className="devicon-express-original colored"></i> Express
-        </li>
-        <li className="list-item">
-          <i className="devicon-mongodb-plain-wordmark colored"></i> MongoDB
-        </li> */}
-
-            {/* Esto no va */}
-          </ul>
-        </div>
-
+      <div className="container ">
         <div className="functionality">
           <div className="functionality-info">
             <h3>Funcionalidades:</h3>
@@ -142,10 +97,56 @@ const Project = (props) => {
             <img src={process.env.PUBLIC_URL + "/learning.svg"} alt="" />
           </div>
         </div>
+        <div className="divider"></div>
+
+        <div className="project-technologies container  d-flex justify-content-start p-0">
+          <h3 className="w-100 pb-3">Tecnologías utilizadas:</h3>
+          <ul
+            className="project-tech-list"
+            // dangerouslySetInnerHTML={{ __html: project.technologies }}
+          >
+            {/* Esto no va */}
+            {project.technologies.map((technology, i) => (
+              <li className="list-item" key={i}>
+                <i className={technology.icon}></i> {technology.name}
+              </li>
+            ))}
+
+            {/* <li className="list-item">
+          <i className="devicon-html5-plain colored"></i> HTML5
+        </li>
+        <li className="list-item">
+          <i className="devicon-css3-plain colored"></i> CSS3
+        </li>
+        <li className="list-item">
+          <i className="devicon-javascript-plain colored"></i> JavaScript
+        </li>
+        <li className="list-item">
+          <i className="devicon-react-original colored"></i> React
+        </li>
+        <li className="list-item">
+          <i className="devicon-redux-original colored"></i> Redux
+        </li>
+        <li className="list-item">
+          <i className="devicon-bootstrap-plain colored"></i> Bootstrap
+        </li>
+        <li className="list-item">
+          <i className="devicon-nodejs-plain colored"></i> Node
+        </li>
+        <li className="list-item">
+          <i className="devicon-express-original colored"></i> Express
+        </li>
+        <li className="list-item">
+          <i className="devicon-mongodb-plain-wordmark colored"></i> MongoDB
+        </li> */}
+
+            {/* Esto no va */}
+          </ul>
+        </div>
       </div>
       <div className="divider"></div>
       <div className="image-gallery">
-        <div className="carousel-container">
+        <div className="carousel-container ">
           <Carousel interval={5000}>
             {assets &&
               assets.map((asset, i) => (
