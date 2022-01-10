@@ -1,24 +1,18 @@
 import React from "react";
 
+import { useTranslation } from "react-i18next";
+
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="container landing">
       <div className="home-page">
         <h1>
-          Hola, soy <span>Simon Sanchez</span>
+          {t("hola")}
+          <span>{t("full_name")}</span>
         </h1>
-        <p>
-          Desarrollador full stack orientado al desarrollo de sitios web y
-          aplicaciones móviles
-        </p>
-        {/* <h1>
-          Hi, I am <span>Simon Sanchez</span>
-        </h1>
-        <p>
-          I am a frontend web developer. I can provide clean code and pixel
-          perfect design. I also make website more & more interactive with web
-          animations.
-        </p> */}
+        <p>{t("landing_description")}</p>
         <div className="social">
           <ul>
             <li>
@@ -53,14 +47,6 @@ function Home() {
                 <i className="fab fa-facebook fa-2x"></i>{" "}
               </a>
             </li>
-
-            {/* <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                {" "}
-                <i className="fab fa-twitter fa-2x"></i>{" "}
-              </a>
-            </li> */}
-
             <li>
               <a
                 href="https://www.instagram.com/"

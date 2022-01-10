@@ -1329,6 +1329,7 @@ body::before {
   color: black;
 }
 .modal-body {
+  cursor: pointer;
   padding: 0;
   width: 600px;
   max-width: 100%;

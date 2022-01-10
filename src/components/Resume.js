@@ -360,6 +360,28 @@ const Resume = () => {
                 See certification
               </button>
             </li>
+            <li>
+              <div className="certification-info">
+                <i class="devicon-mongodb-plain-wordmark colored"></i>
+                <div className="info">
+                  <span className="certification-title">
+                    Backend Development and APIs
+                  </span>
+                  <span className="issued">By FreeCodeCamp</span>
+                </div>
+              </div>
+              <button
+                className="see-certification"
+                onClick={() =>
+                  handleShow(
+                    process.env.PUBLIC_URL +
+                      "/certifications/freecodecamp-backend.png"
+                  )
+                }
+              >
+                See certification
+              </button>
+            </li>
           </ul>
           <Modal className="component-modal" show={show} onHide={handleClose}>
             <Modal.Body className="modal-body">

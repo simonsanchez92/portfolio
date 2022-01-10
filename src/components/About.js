@@ -1,15 +1,17 @@
 import React from "react";
 import profilePic from "../img/profile.jpg";
 
+import { useTranslation } from "react-i18next";
+
 function About() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div className="container">
         <div className="section-title">
-          <h2>Sobre mi</h2>
-          <span>Sobre mi</span>
-          {/* <h2>About Me</h2>
-          <span>About Me</span> */}
+          <h2>{t("about_title")}</h2>
+          <span>{t("about_title")}</span>
         </div>
 
         <div className="about-info row">
@@ -19,7 +21,7 @@ function About() {
 
           <div className="about-content">
             <h3>
-              Hola, soy <span>Simon Sanchez</span>
+              {t("hola")} <span>{t("full_name")}</span>
             </h3>
             <p>
               Soy un desarrollador web full stack capaz de proveer sitios web
@@ -53,57 +55,17 @@ function About() {
               rel="noopener noreferrer"
               download
             >
-              Descargar CV
+              {t("download_cv")}
             </a>
-            {/* <h3>
-              I am <span>Simon Sanchez</span>
-            </h3>
-            <p>
-              I am a fullstack web developer. I can provide clean code websites
-              more & more interactive with web animations, database integration
-              and much more.
-            </p>
-            <ul>
-              <li>
-                <b>Full Name</b>Simon Sanchez
-              </li>
-              <li>
-                <b>Age</b> 29
-              </li>
-              <li>
-                <b>Nationality</b> Argentine
-              </li>
-              <li>
-                <b>Languages</b> English, Spanish
-              </li>
-              <li>
-                <b>Location</b> Tucuman, Argentina
-              </li>
-              <li>
-                <b>Availability</b> Hirable
-              </li>
-            </ul>
-            <a
-              href="https://www.linkedin.com/in/simon-sanchez-4a4011190/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Download CV
-            </a> */}
           </div>
         </div>
       </div>
 
       <div className="container technologies-container">
         <div className="section-title">
-          <h2>Tecnologías</h2>
-          <span>Tecnologías</span>
-          {/* <h2>Tech Stack</h2>
-          <span>Tech Stack</span> */}
+          <h2>{t("tech_stack_title")}</h2>
+          <span>{t("tech_stack_title")}</span>
         </div>
-        {/* <h3 id="technologies-title">
-          <span>Technologies</span> I work with...
-        </h3> */}
 
         {/* Technologies container */}
         <div className="technologies">
@@ -172,10 +134,8 @@ function About() {
       </div>
       <div className="container">
         <div className="section-title">
-          {/* <h2>Services</h2>
-          <span>Services</span> */}
-          <h2>Servicios</h2>
-          <span>Servicios</span>
+          <h2>{t("services_title")}</h2>
+          <span>{t("services_title")}</span>
         </div>
 
         <div className="services">
@@ -211,38 +171,6 @@ function About() {
             </p>
           </div>
         </div>
-        {/* <div className="services">
-          <div className="service">
-            <span>
-              <i className="fas fa-palette"></i>
-            </span>
-            <h5>Web Design</h5>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              tenetur ratione quod.
-            </p>
-          </div>
-          <div className="service">
-            <span>
-              <i className="fas fa-code"></i>
-            </span>
-            <h5>Web Development</h5>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              tenetur ratione quod.
-            </p>
-          </div>
-          <div className="service">
-            <span>
-              <i className="fas fa-mobile-alt"></i>
-            </span>
-            <h5>Responsive Design</h5>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              tenetur ratione quod.
-            </p>
-          </div>
-        </div> */}
       </div>
     </div>
   );

@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form";
 import emailJs from "@emailjs/browser";
 import keys from "../emailSender/keys";
 
+import { useTranslation } from "react-i18next";
+
 const Contact = () => {
   const form = useRef();
   const formName = useRef();
@@ -13,6 +15,7 @@ const Contact = () => {
   const formSubject = useRef();
   const formMessage = useRef();
 
+  const { t } = useTranslation();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -64,62 +67,58 @@ const Contact = () => {
 
   return (
     <div className="container contact-container">
-      {/* <div class="container contact-container"> */}
-
       <div className="section-title">
-        {/* <h2>Contact Me</h2>
-        <span>Contact Me</span> */}
-        <h2>Contacto</h2>
-        <span>Contacto</span>
+        <h2>{t("contact_title")}</h2>
+        <span>{t("contact_title")}</span>
       </div>
+
       <ToastContainer position="bottom-right" limit="1" />
       <div className="container form-container">
         <div className="contact-form">
-          {/* <h4>Get In Touch</h4> */}
-          <h4>Contactame</h4>
+          <h4>{t("contact_form_title")}</h4>
 
           <Form ref={form} onSubmit={sendEmail}>
             <Form.Group controlId="form-name">
-              <Form.Label>Tu nombre:</Form.Label>
+              <Form.Label>{t("contact_form_name")}:</Form.Label>
               <Form.Control
                 ref={formName}
                 className={"form-control"}
                 as="input"
-                placeholder="Ingresa tu nombre..."
+                placeholder={t("contact_form_name_placeholder")}
               />
             </Form.Group>
 
             <Form.Group controlId="form-email">
-              <Form.Label>Email:</Form.Label>
+              <Form.Label>{t("contact_form_email")}:</Form.Label>
               <Form.Control
                 ref={formEmail}
                 className={"form-control"}
                 as="input"
-                placeholder="Ingresa tu Email..."
+                placeholder={t("contact_form_email_placeholder")}
               />
             </Form.Group>
 
             <Form.Group controlId="form-subject">
-              <Form.Label>Asunto</Form.Label>
+              <Form.Label>{t("contact_form_subject")}</Form.Label>
               <Form.Control
                 ref={formSubject}
                 as="input"
-                placeholder="Ingresa el asunto.."
+                placeholder={t("contact_form_subject_placeholder")}
               />
             </Form.Group>
 
             <Form.Group controlId="form-message">
-              <Form.Label>Tu mensaje:</Form.Label>
+              <Form.Label>{t("contact_form_msg")}:</Form.Label>
               <Form.Control
                 ref={formMessage}
                 as="textarea"
                 rows={3}
-                placeholder="Escribe un mensaje..."
+                placeholder={t("contact_form_msg_placeholder")}
               />
             </Form.Group>
 
             <button className="form-btn" type="submit">
-              Enviar mail
+              {t("contact_form_btn")}
             </button>
           </Form>
         </div>
@@ -131,7 +130,7 @@ const Contact = () => {
             </span>
 
             <div className="contact-card-content">
-              <h6>Redes sociales</h6>
+              <h6>{t("social_media_title")}</h6>
 
               <ul>
                 <li>
@@ -174,12 +173,6 @@ const Contact = () => {
                     <i className="fab fa-instagram"></i>/Instagram
                   </a>
                 </li>
-                {/* <li>
-                  <a href="#">
-                    {" "}
-                    <i class="fab fa-twitter "></i>/Twitter
-                  </a>
-                </li> */}
               </ul>
             </div>
           </div>
