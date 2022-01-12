@@ -1,16 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import projectsFile from "../js/projects.json";
-import projectsFile from "../js/proyectos.json";
+import projectsFile from "../js/projects.json";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
   const fetchData = async () => {
-    // const data = await getProjects();
     setProjects(projectsFile.projects);
-    console.log(projectsFile.projects);
-    console.log(projects);
   };
 
   useEffect(() => {
@@ -32,11 +28,11 @@ const Portfolio = () => {
           projects.map((project, i) => (
             <div className="project" key={i}>
               <div className="project-image">
-                {/* <img src={process.env.PUBLIC_URL + project.cover_url} alt="" /> */}
                 <img src={process.env.PUBLIC_URL + project.cover_url} alt="" />
                 <ul>
                   <li>
                     <Link
+                      style={{ textDecoration: "none" }}
                       className="project-link"
                       to={{
                         pathname: `/project/${project.id}`,

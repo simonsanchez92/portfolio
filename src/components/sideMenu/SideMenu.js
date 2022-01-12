@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import profilePicture from "../../img/my-profile.jpg";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAddressCard,
@@ -92,7 +92,7 @@ const SideMenu = ({ isCollapsed, toggle }) => {
             >
               <img
                 className={isCollapsed ? "collapsed" : ""}
-                src={profilePicture}
+                src={process.env.PUBLIC_URL + "/img/my-profile.jpg"}
                 alt="profile"
               />
             </div>
@@ -120,18 +120,7 @@ const SideMenu = ({ isCollapsed, toggle }) => {
               About
             </Link>
           </MenuItem>
-          <MenuItem
-            onClick={() => handleChange("resume")}
-            icon={resumeIcon}
-            active={active.active === "resume" ? true : false}
-          >
-            <Link
-              className={active.active === "resume" ? "active" : ""}
-              to="/resume"
-            >
-              Resume
-            </Link>
-          </MenuItem>
+
           <MenuItem
             onClick={() => handleChange("portfolio")}
             icon={portfolioIcon}
@@ -142,6 +131,18 @@ const SideMenu = ({ isCollapsed, toggle }) => {
               to="/portfolio"
             >
               Portfolio
+            </Link>
+          </MenuItem>
+          <MenuItem
+            onClick={() => handleChange("resume")}
+            icon={resumeIcon}
+            active={active.active === "resume" ? true : false}
+          >
+            <Link
+              className={active.active === "resume" ? "active" : ""}
+              to="/resume"
+            >
+              Resume
             </Link>
           </MenuItem>
           <MenuItem

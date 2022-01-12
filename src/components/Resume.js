@@ -21,6 +21,120 @@ const Resume = () => {
           <h2>Resume</h2>
           <span>Resume</span>
         </div>
+
+        <div className="small-title">
+          <span className="small-title-icon">
+            <i className="fas fa-briefcase"></i>
+          </span>
+          <h4>Working Experience</h4>
+        </div>
+        <div className="resume-wrapper">
+          <div className="resume">
+            <div className="resume-summary">
+              <h6 className="resume-year">2021-now</h6>
+            </div>
+            <div className="resume-details">
+              <h5>Software Developer</h5>
+              <h6 className="resume-company">
+                Municipalidad de San Miguel de Tucumán
+              </h6>
+              <p>
+                Building and maintaining web and mobile applications, focusing
+                mainly on frontend. Gaining experience with backend technologies
+                and databases
+              </p>
+              <div className="topics">
+                <h6>Topics Covered:</h6>
+                <ul>
+                  <li>React JS</li>
+                  <li>Bootstrap</li>
+                  <li>State management with Redux</li>
+                  <li>React Native</li>
+                  <li>Ionic Framework</li>
+                  <li>Springboot backend development</li>
+                  <li>PosgreSQL DB management system</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="resume">
+            <div className="resume-summary">
+              <h6 className="resume-year">2016 - 2020</h6>
+            </div>
+            <div className="resume-details">
+              <h5>English instructor</h5>
+              <h6 className="resume-company">Private lessons</h6>
+              <p>
+                Provided individual classes to highschool and college students.
+                Helped with homework and exam preparation covering speaking,
+                writing, and reading skills on different areas.
+              </p>
+              <div className="topics">
+                <h6>Topics Covered:</h6>
+                <ul>
+                  <li>Parts of speech</li>
+                  <li>Verb tenses</li>
+                  <li>Grammatical structures</li>
+                  <li>Syntactic analysis</li>
+                  <li>Writing techniques</li>
+                  <li>Speech organization</li>
+                  <li>Pronunciation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="resume">
+            <div className="resume-summary">
+              <h6 className="resume-year">2014-2019</h6>
+            </div>
+            <div className="resume-details">
+              <h5>English-Spanish translator</h5>
+              <h6 className="resume-company">Freelance</h6>
+              <p>
+                Worked on translations under commision for diverse clients.
+                Published some works through Wordpress control panel.
+              </p>
+              <div className="topics">
+                <h6>Topics Covered:</h6>
+                <ul>
+                  <li>Technology</li>
+                  <li>Tutorials</li>
+                  <li>Education</li>
+                  <li>Healthy Eating</li>
+                  <li>Workouts</li>
+                  <li>Meditation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="resume">
+            <div className="resume-summary">
+              <h6 className="resume-year">2012-2018</h6>
+            </div>
+            <div className="resume-details">
+              <h5>Web Content Writer</h5>
+              <h6 className="resume-company">Freelance</h6>
+              <p>
+                Wrote and published articles and reviews for several websites,
+                mainly related to technology
+              </p>
+              <div className="topics">
+                <h6>Topics Covered:</h6>
+                <ul>
+                  <li>Technology news</li>
+                  <li>Mobile Apps and games reviews</li>
+                  <li>Desktop software</li>
+                  <li>Computer hardware</li>
+                  <li>Tutorials</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider"></div>
         <div className="small-title">
           <span className="small-title-icon">
             <i className="fas fa-user-graduate"></i>
@@ -34,26 +148,26 @@ const Resume = () => {
               <h6 className="resume-year">2021 - current</h6>
             </div>
             <div className="resume-details">
-              <h5>Associate, Computer Programming</h5>
+              <h5>Associate, Computer Science</h5>
               <h6 className="resume-company">
                 Universidad Tecnica Nacional, Argentina
               </h6>
               <p>
-                Developed solid communication skills both written and oral, as
-                well as a deep understanding of the building blocks, history,
-                and nuances of the language
+                Acquired solid knowledge regarding the fundamentals of computer
+                science and software programming. Developed proficiency in the
+                process of planning, design, implementation and maintenance of
+                software.
               </p>
 
               <div className="topics">
                 <h6>Topics Covered:</h6>
                 <ul>
-                  <li>English grammar and usage</li>
-                  <li>Syntactic structures</li>
-                  <li>Writing techniques</li>
-                  <li>Phonetics and phonology</li>
-                  <li>British and American literature</li>
-                  <li>History of the english-speaking countries</li>
-                  <li>Applied linguistics and literary theory</li>
+                  <li>Programming Fundamentals</li>
+                  <li>Web programming</li>
+                  <li>Databases</li>
+                  <li>Data Processing systems</li>
+                  <li>Operating Systems</li>
+                  <li>Statistics</li>
                 </ul>
               </div>
             </div>
@@ -84,92 +198,6 @@ const Resume = () => {
                   <li>British and American literature</li>
                   <li>History of the english-speaking countries</li>
                   <li>Applied linguistics and literary theory</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="divider"></div>
-
-        <div className="small-title">
-          <span className="small-title-icon">
-            <i className="fas fa-briefcase"></i>
-          </span>
-          <h4>Working Experience</h4>
-        </div>
-        <div className="resume-wrapper">
-          <div className="resume">
-            <div className="resume-summary">
-              <h6 className="resume-year">2016 - now</h6>
-            </div>
-            <div className="resume-details">
-              <h5>English instructor</h5>
-              <h6 className="resume-company">Private teaching</h6>
-              <p>
-                Gave individual classNamees to highschool and college students,
-                helped with homework and exam preparation covering speaking,
-                writing, and reading skills on different topics
-              </p>
-              <div className="topics">
-                <h6>Topics Covered:</h6>
-                <ul>
-                  <li>Parts of speech</li>
-                  <li>Verb tenses</li>
-                  <li>Grammatical structures</li>
-                  <li>Syntactic analysis</li>
-                  <li>Writing techniques</li>
-                  <li>Speech organization</li>
-                  <li>Pronunciation</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="resume">
-            <div className="resume-summary">
-              <h6 className="resume-year">2014-2019</h6>
-            </div>
-            <div className="resume-details">
-              <h5>English-Spanish translator</h5>
-              <h6 className="resume-company">Freelance</h6>
-              <p>
-                Worked on translations under commision for diverse clients.
-                Published some works through Wordpress' control panel.
-              </p>
-              <div className="topics">
-                <h6>Topics Covered:</h6>
-                <ul>
-                  <li>Technology</li>
-                  <li>Tutorials</li>
-                  <li>Education</li>
-
-                  <li>Healthy Eating</li>
-                  <li>Workouts</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="resume">
-            <div className="resume-summary">
-              <h6 className="resume-year">2012-2018</h6>
-            </div>
-            <div className="resume-details">
-              <h5>Web Content Writer</h5>
-              <h6 className="resume-company">Freelance</h6>
-              <p>
-                Wrote and published articles and reviews for several websites,
-                mainly related to technology
-              </p>
-              <div className="topics">
-                <h6>Topics Covered:</h6>
-                <ul>
-                  <li>Technology news</li>
-                  <li>Mobile Apps and games reviews</li>
-                  <li>Desktop software</li>
-                  <li>Computer hardware</li>
-                  <li>Tutorials</li>
                 </ul>
               </div>
             </div>
@@ -242,152 +270,6 @@ const Resume = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="section-title">
-          <h2>Certifications</h2>
-          <span>Certifications</span>
-        </div>
-
-        <div className="certifications-container">
-          <ul className="certifications">
-            <li>
-              <div className="certification-info">
-                <i className="devicon-css3-plain-wordmark colored"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Responsive web design
-                  </span>
-                  <span className="issued">By FreeCodeCamp</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/freecodecamp-responsive-web-design.png"
-                  )
-                }
-              >
-                See certification
-              </button>
-            </li>
-            <li>
-              <div className="certification-info">
-                <i className="devicon-react-original-wordmark colored"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Web development career path
-                  </span>
-                  <span className="issued">By Codecademy</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/codecademy-web-development.png"
-                  )
-                }
-              >
-                See certification
-              </button>
-            </li>
-
-            <li>
-              <div className="certification-info">
-                <i className="devicon-javascript-plain colored"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Building Interactive JS Websites
-                  </span>
-                  <span className="issued">By Codecademy</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/codecademy-interactive-websites.png"
-                  )
-                }
-              >
-                See certification
-              </button>
-            </li>
-            <li>
-              <div className="certification-info">
-                <i className="devicon-git-plain colored"></i>
-                <div className="info">
-                  <span className="certification-title">Learn Git</span>
-                  <span className="issued">By Codecademy</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/codecademy-git.png"
-                  )
-                }
-              >
-                See certification
-              </button>
-            </li>
-            <li>
-              <div className="certification-info">
-                <i className="fas fa-terminal"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Learn the Command Line
-                  </span>
-                  <span className="issued">By Codecademy</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/codecademy-command-line.png"
-                  )
-                }
-              >
-                See certification
-              </button>
-            </li>
-            <li>
-              <div className="certification-info">
-                <i class="devicon-mongodb-plain-wordmark colored"></i>
-                <div className="info">
-                  <span className="certification-title">
-                    Backend Development and APIs
-                  </span>
-                  <span className="issued">By FreeCodeCamp</span>
-                </div>
-              </div>
-              <button
-                className="see-certification"
-                onClick={() =>
-                  handleShow(
-                    process.env.PUBLIC_URL +
-                      "/certifications/freecodecamp-backend.png"
-                  )
-                }
-              >
-                See certification
-              </button>
-            </li>
-          </ul>
-          <Modal className="component-modal" show={show} onHide={handleClose}>
-            <Modal.Body className="modal-body">
-              <img src={certificationPath} alt="" />
-            </Modal.Body>
-          </Modal>
         </div>
       </div>
     </Fragment>

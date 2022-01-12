@@ -1,18 +1,16 @@
 import React from "react";
 
-import { useTranslation } from "react-i18next";
-
 function Home() {
-  const { t } = useTranslation();
-
   return (
     <div className="container landing">
       <div className="home-page">
         <h1>
-          {t("hola")}
-          <span>{t("full_name")}</span>
+          Hello, I am <span>Simon Sanchez</span>
         </h1>
-        <p>{t("landing_description")}</p>
+        <p>
+          Fullstack Developer specialized in building websites and mobile
+          applications
+        </p>
         <div className="social">
           <ul>
             <li>

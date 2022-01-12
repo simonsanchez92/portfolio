@@ -1,62 +1,126 @@
 {
-  "id": "1",
-  "title": "The Final Cut",
-  "subtitle": "Movie searcher web application",
-  "cover_url": "/the-final-cut/the-final-cut-1.png",
-  "functionality": [
-    { "desc": "Sign up / Sign in" },
-    { "desc": "Search movies by title" },
-    { "desc": "Pagination" },
-    { "desc": "Access movie's plot and information" },
-    { "desc": "Add / remove favourites" },
-    { "desc": "Log out" },
-    { "desc": "Delete account" }
-  ],
-  "technologies": [
-    { "name": "HTML5", "icon": "devicon-html5-plain colored" },
-    { "name": "CSS3", "icon": "devicon-css3-plain colored" },
-    { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
-    { "name": "React", "icon": "devicon-react-original colored" },
-    { "name": "Redux", "icon": "devicon-redux-original colored" },
-    { "name": "Bootstrap", "icon": "devicon-bootstrap-plain colored" },
-    { "name": "Node", "icon": "devicon-nodejs-plain colored" },
-    { "name": "Express", "icon": "ddevicon-express-original colored" },
-    { "name": "MongoDB", "icon": "devicon-mongodb-plain-wordmark colored" }
-  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "The Final Cut",
+      "subtitle": "Movies information website",
+      "cover_url": "/the-final-cut/the-final-cut-1.png",
+      "functionality": [
+        {
+          "desc": "Fetching of movies data from themoviedb.org API"
+        },
+        { "desc": "Sign in / Sign up" },
+        { "desc": "Movie searching by title" },
+        { "desc": "Pagination" },
+        { "desc": "Acces to individual movie information" },
+        { "desc": "Add / delete favourites" },
+        { "desc": "Custom alert messages" },
+        { "desc": "Log out" },
+        { "desc": "Delete account" }
+      ],
+      "technologies": [
+        { "name": "HTML5", "icon": "devicon-html5-plain colored" },
+        { "name": "CSS3", "icon": "devicon-css3-plain colored" },
+        { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+        { "name": "React", "icon": "devicon-react-original colored" },
+        { "name": "Redux", "icon": "devicon-redux-original colored" },
+        { "name": "Bootstrap", "icon": "devicon-bootstrap-plain colored" },
+        { "name": "Node", "icon": "devicon-nodejs-plain colored" },
+        { "name": "Express", "icon": "ddevicon-express-original colored" },
+        { "name": "MongoDB", "icon": "devicon-mongodb-plain-wordmark colored" }
+      ],
 
-  "learnt": [
-    { "desc": "State management with Redux" },
-    { "desc": "React useState and useEffect hooks" },
-    { "desc": "Built backend with node / express" },
-    { "desc": "Model, controllers and routes " },
-    { "desc": "Express data validation" },
-    { "desc": "Integration with Mongoose service" },
-    { "desc": "Javascript array methods" },
+      "learnt": [
+        { "desc": "Application state management with Redux" },
+        { "desc": "Fetching data from 3rd party API" },
+        { "desc": "Implementación de hooks de React" },
+        { "desc": "Implementation of React Hooks" },
+        { "desc": "Backend development with Node and Express" },
+        { "desc": "Building of controllers, models and routes " },
+        { "desc": "Express validators" },
+        { "desc": "Integration with Mongoose" },
+        { "desc": "React Bootstrap Library" }
+      ],
+      "images": [
+        {
+          "url": "/the-final-cut/the-final-cut-1.png",
+          "alt": "picture 1"
+        },
+        {
+          "url": "/the-final-cut/the-final-cut-2.png",
+          "alt": "picture 2"
+        },
+        {
+          "url": "/the-final-cut/the-final-cut-3.png",
+          "alt": "picture 3"
+        },
+        {
+          "url": "/the-final-cut/the-final-cut-4.png",
+          "alt": "picture 4"
+        },
+        {
+          "url": "/the-final-cut/the-final-cut-5.png",
+          "alt": "picture 5"
+        }
+      ],
+      "url": "https://shrouded-oasis-45232.herokuapp.com",
+      "github_url": "https://github.com/simonsanchez92/the-final-cut-backend"
+    },
+    {
+      "id": "2",
+      "title": "Portfolio site",
+      "subtitle": "Website to showcase projects and skills ",
+      "cover_url": "/portfolio/portfolio-1.png",
+      "functionality": [
+        {
+          "desc": "React Router for navigation across components"
+        },
+        { "desc": "Dropdown menus (top and lateral)" },
+        { "desc": "Responsive design" },
+        { "desc": "Dynamic loading of portfolio projects" },
+        { "desc": "Implementation of modals for visualizing certifications" },
+        { "desc": "Carousel/slider in projects section " },
+        { "desc": "Acces to github repositories and URLs of each project" },
+        { "desc": "Download CV in spanish or english" },
+        { "desc": "Email me from contact section" },
+        { "desc": "Alert messages" }
+      ],
+      "technologies": [
+        { "name": "HTML5", "icon": "devicon-html5-plain colored" },
+        { "name": "CSS3", "icon": "devicon-css3-plain colored" },
+        { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+        { "name": "React", "icon": "devicon-react-original colored" },
 
-    { "desc": "React Bootstrap library" }
-  ],
-  "images": [
-    {
-      "url": "/the-final-cut/the-final-cut-1.png",
-      "alt": "picture 1"
-    },
-    {
-      "url": "/the-final-cut/the-final-cut-1.png",
-      "alt": "picture 2"
-    },
-    {
-      "url": "/the-final-cut/the-final-cut-1.png",
-      "alt": "picture 3"
-    },
-    {
-      "url": "/the-final-cut/the-final-cut-1.png",
-      "alt": "picture 4"
-    },
-    {
-      "url": "/the-final-cut/the-final-cut-1.png",
-      "alt": "picture 5"
+        { "name": "Bootstrap", "icon": "devicon-bootstrap-plain colored" }
+      ],
+
+      "learnt": [
+        { "desc": "Implementation of 3rd party libraries" },
+        { "desc": "React components organization" },
+        { "desc": "Implementation of React Hooks" },
+        { "desc": "State management" },
+        { "desc": "Deploy to Github Pages" }
+      ],
+      "images": [
+        {
+          "url": "/portfolio/portfolio-1.png",
+          "alt": "picture 1"
+        },
+        {
+          "url": "/portfolio/portfolio-2.png",
+          "alt": "picture 2"
+        },
+        {
+          "url": "/portfolio/portfolio-3.png",
+          "alt": "picture 3"
+        },
+        {
+          "url": "/portfolio/portfolio-4.png",
+          "alt": "picture 4"
+        }
+      ],
+      "url": "https://simonsanchez92.github.io/portfolio/",
+      "github_url": "https://github.com/simonsanchez92/portfolio"
     }
-  ],
-  "url": "https://thawing-basin-65705.herokuapp.com",
-  "github_url": "https://github.com/simonsanchez92/the-final-cut-backend"
+  ]
 }
